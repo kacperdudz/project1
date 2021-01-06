@@ -36,3 +36,7 @@ type `git clone https://github.com/kacperdudz/project1.git` to clone this repo
 ## Contributors
 
 Kacper Dudzinski
+
+## License
+
+This project does not use a license
