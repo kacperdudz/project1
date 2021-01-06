@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Complete Bootstrap 4 Website Layout</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    
+    <link href="../style.css" rel="stylesheet">
+
+    <style>
+        .back {
+        background: #e2e2e2;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        }
+
+        .div-center {
+        width: 400px;
+        height: 400px;
+        background-color: #fff;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        max-width: 100%;
+        max-height: 100%;
+        overflow: auto;
+        padding: 1em 2em;
+        border-bottom: 2px solid #cccccc;
+        display: table;
+        }
+
+        div.content {
+        display: table-cell;
+        vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div class="back">
+        <div class="div-center">
+            <div class="content">
+                <h3>Submit for reimbursement</h3>
+                <hr />
+                <form action="/app/api/newreimb" method="POST">
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" id="title" name="title" class="form-control" maxlength="20">
+                    </div>
+                    <div class="form-group">
+                        <label for="desc">Description</label>
+                        <input type="text" id="desc" name="desc" class="form-control" maxlength="70">
+                    </div>
+                    <div class="form-group">
+                        <label for="amt">Amount</label>
+                        <input type="number" id="amt" name="amt" min="1" max="1000000" class="form-control">
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Apply for reimbursement</button>
+                    <hr />
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
